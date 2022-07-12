@@ -37,6 +37,14 @@ function Cryp:ToggleUI()
     end
 end
 
+function Cryp:DestroyUI() 
+for _,v in pairs(game.CoreGui:GetChildren()) do
+    if v.Name == "Cryptic-XD" then
+        v:Destroy() 
+      end
+   end
+end 
+
 function Cryp:AddTitle(name, gameName, theme)
     if not theme then
         theme = Theme.Default
